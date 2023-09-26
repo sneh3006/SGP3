@@ -5,10 +5,16 @@ import pramukhClass from '../public/Pramukh_Classes.png';
 import personLogo from '../public/person.svg';
 import keyLogo from '../public/key.svg';
 import authLogo from '../public/auth-logo.svg';
+import { useRouter } from 'next/navigation';
+
+import Dashboardpage from '@/app/(dashborads)/(routes)/dashborad/page';
+
 import './Login.css'
 
 
 function Login() {
+  const router=useRouter();
+
   return (
     <div className='flex justify-center items-center content-center'>
       <div className='flex'>
@@ -40,7 +46,7 @@ function Login() {
             <div className='flex justify-center'>
               <div className='my-5 px-5 justify-center items-center border-[0.5px] border-solid border-black bg-blue-600 flex text-white rounded-[10px] w-[150px] h-[50px]'>
                 <Image alt='person' src={authLogo} className='h-7' />
-                <button className='text-bold'>
+                <button className='text-bold' onClick={()=>router.push('/dashborad')}>
                   Login</button>
               </div>
             </div>
@@ -61,4 +67,5 @@ function Login() {
   )
 }
 
-export default Login
+export default Login;
+
