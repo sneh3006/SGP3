@@ -5,7 +5,7 @@
       <a href="{% url 'admin_home' %}" class="brand-link">
         <img src="{% static 'dist/img/jecrc_logo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3 ml-5"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">JECRC</span>
+        <span class="brand-text font-weight-light">Pramukh Classes</span>
       </a>
 
       <!-- Sidebar -->
@@ -18,7 +18,7 @@
             <img src="{% static 'dist/img/logo.png' %}" class="img-circle elevation-2 ml-5" alt="User Image" style="max-width:100%;">
           </div>
           <div class="info">
-            <a href="{% url 'admin_home' %}" class="d-block">{{ user.first_name }} {{ user.last_name }}</a>
+            <a href="{% url 'admin_profile' %}" class="d-block">{{ user.first_name }} {{ user.last_name }}</a>
           </div>
         </div>
 
