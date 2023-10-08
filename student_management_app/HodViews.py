@@ -434,7 +434,6 @@ def edit_student_save(request):
             course_id = form.cleaned_data['course_id']
             gender = form.cleaned_data['gender']
             session_year_id = form.cleaned_data['session_year_id']
-
             # Getting Profile Pic first
             # First Check whether the file is selected or not
             # Upload only if file is selected
