@@ -4,7 +4,7 @@ from .models import CustomUser, Staffs, Students, AdminHOD
 from django.contrib import messages
 
 def home(request):
-	return render(request, 'home.html')
+	return render(request, 'login_page.html')
 
 
 def contact(request):

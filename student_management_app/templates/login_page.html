@@ -14,93 +14,57 @@
 	
 	
 	<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
-
   height:1000px;
-                
-                background:#475d62;
-                background-color: cover;
-                font-family: sans-seriff;
+  background: #0FC5D4;
     }
 
 .login-dark {
-  max-width:320px;
-  width:90%;
-  background-color: #1e2833;
-  padding:40px;
-  border-radius:4px;
-  transform: translate(-50%,-50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color:#fff;
-  box-shadow:3px 3px 4px rgba(0,0,0,0.2);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px -1px 18px 5px rgba(0, 0, 0, 0.25);
 }
 
 .login-dark form {
-  max-width:320px;
-  width:90%;
-  background-color:#1e2833;
-  padding:40px;
-  border-radius:4px;
-  transform:translate(-50%, -50%);
-  position:absolute;
-  top:50%;
-  left:50%;
-  color:#fff;
-  box-shadow:3px 3px 4px rgba(0,0,0,0.2);
+
 }
 
 .login-dark .illustration {
-  text-align:center;
-  padding:15px 0 20px;
-  font-size:100px;
-  color:#2980ef;
+
 }
 
 .login-dark form .form-control {
-  background:none;
-  border:none;
-  border-bottom:1px solid #434a52;
-  border-radius:0;
-  box-shadow:none;
-  outline:none;
-  color:inherit;
+
 }
 
 .login-dark form .btn-primary {
-  background:#214a80;
-  border:none;
-  border-radius:4px;
-  padding:11px;
-  box-shadow:none;
-  margin-top:26px;
-  text-shadow:none;
-  outline:none;
+
 }
 
 .login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
-  background:#214a80;
-  outline:none;
+
 }
 
 .login-dark form .forgot {
-  display:block;
-  text-align:center;
-  font-size:12px;
-  color:#6f7a85;
-  opacity:0.9;
-  text-decoration:none;
+
 }
 
 .login-dark form .forgot:hover, .login-dark form .forgot:active {
-  opacity:1;
-  text-decoration:none;
+
 }
 
 .login-dark form .btn-primary:active {
-  transform:translateY(1px);
+
 }
 
 </style>
@@ -109,32 +73,14 @@ body{
 </head>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="/ ">BACK TO HOME</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-		</ul>
-		<form class="form-inline my-2 my-lg-0">
-			
-			<a href="{% url 'contact' %}" class="btn btn-outline-danger my-1 mx-2">Contact Us</a>
-		</form>
-<!--		<form class="form-inline my-2 my-lg-0">-->
-	</div>
-</nav>
-
 <div class="login-dark form-inline py-0 mx-4 my-4 pl-4 pr-4">
 	
 	<form action="{% url 'doLogin' %}" method="get">
 		{% csrf_token %}
 		<h1 class="text-center">Login</h1>
-		
+		<hr>
 		<div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
 		
-
 		
 		<div class="form-group"><input class="form-control mb-2" type="email" name="email" placeholder="Email"></div>
 		<div class="form-group"><input class="form-control mb-2" type="password" name="password" placeholder="Password"></div>
