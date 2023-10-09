@@ -49,14 +49,43 @@ body{
   text-decoration: none;
 }
 
+.login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
+  background:#214a80;
+  outline:none;
+}
+
 </style>
 
 
 </head>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto"></ul>
+    <form class="form-inline my-2 my-lg-0">
+      <!-- <input class="form-control mr-sm-2" type="login" placeholder="login" aria-label="login">-->
 
+      <!--<input class="form-control mr-sm-2" type="Register" placeholder="Register" aria-label="Register">-->
+      <a href="/contact" class="btn btn-danger my-1 mx-2">Contact Us</a>
+      <!--<input class="form-control mr-sm-2" type="register" placeholder="register" aria-label="register">-->
+    </form>
+  </div>
+</nav>
+<!-- container -->
 <div class="container">
-  <!-- container -->
+  
   <div class="login-dark form-inline py-0 mx-4 my-4 pl-4 pr-4 pb-3 ">
     <!-- form starts here -->
     <form action="{% url 'doLogin' %}" method="get">
